@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { render } from "react-dom";
 import "./index.scss";
-import { App } from "./App";
 import {
   KcApp as KcAppBase,
   defaultKcProps,
@@ -14,7 +13,11 @@ import tos_en_url from "./tos_en.md";
 import tos_fr_url from "./tos_fr.md";
 import "./kcMessagesExtension"
 
-const kcContext = realKcContext ?? kcContextMocks.kcLoginContext;
+const { kcContext } = getKcContext({
+  /* Uncomment to test th<e login page for development */
+  //"mockPageId": "login.ftl"
+});
+
 if (kcContext !== undefined) {
   console.log(kcContext);
 }
