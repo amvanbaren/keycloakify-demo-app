@@ -12,7 +12,7 @@
         "start": "react-scripts start",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "download-builtin-keycloak-theme": "download-builtin-keycloak-theme 15.0.2"
+        "download-builtin-keycloak-theme": "download-builtin-keycloak-theme 17.0.1"
     },
     "author": "u/garronej",
     "license": "MIT",

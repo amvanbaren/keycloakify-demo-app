@@ -14,18 +14,12 @@ import tos_en_url from "./tos_en.md";
 import tos_fr_url from "./tos_fr.md";
 import "./kcMessagesExtension"
 
-const { kcContext } = getKcContext({
-  /* Uncomment to test th<e login page for development */
-  //"mockPageId": "login.ftl"
-});
-
+const kcContext = realKcContext ?? kcContextMocks.kcLoginContext;
 if (kcContext !== undefined) {
   console.log(kcContext);
 }
 
 render(
-  kcContext === undefined ?
-    <App /> :
     <KcApp />,
   document.getElementById("root")
 );
